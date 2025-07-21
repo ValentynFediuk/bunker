@@ -1,11 +1,17 @@
-export default function WorkingHours() {
+import classNames from 'classnames'
+
+type WorkingHoursProps = {
+  className?: string;
+}
+
+export const WorkingHours = ({ className }: WorkingHoursProps) => {
   const now = new Date();
   const currentHour = now.getHours();
 
   const isBarbershopOpen = currentHour >= 9 && currentHour < 22;
 
   return (
-    <div className="flex items-center gap-2">
+    <div className={classNames(className, "flex items-center gap-2")}>
       <p className={`font-bold ${isBarbershopOpen ? 'text-green-700' : 'text-red-700'}`}>
         {isBarbershopOpen ? 'Відчинено' : 'Зачинено'}
       </p>

@@ -3,9 +3,10 @@ import Image from "next/image";
 const socialLinks = [
   { link: 'https://www.instagram.com/bunker_klm/', icon: '/instagram.png', label: 'Instagram Icon'},
   { link: 'https://www.tiktok.com/@bunker.klm', icon: '/tiktok.png', label: 'TikTok Icon'},
+  { link: 'tel:+380689731515', icon: '/phone.svg', label: 'Phone'},
 ];
 
-export default function Social() {
+export const Social = () => {
   return (
     <ul className="flex gap-4">
       {socialLinks.map(({ link, icon, label }, index) => (

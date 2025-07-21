@@ -11,10 +11,10 @@ type NavBarProps = {
   className?: string;
 }
 
-export default function Navbar({className}: NavBarProps) {
+export const Navbar = ({className}: NavBarProps) => {
   return (
-    <nav className={classNames(className)}>
-      <ul className={'flex gap-4 uppercase font-bold'}>
+    <nav>
+      <ul className={classNames(className, 'gap-4 uppercase font-bold')}>
         {navItems.map(({link, label}) => (
             <li key={link}>
               <Link href={link} key={link}>{label}</Link>

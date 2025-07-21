@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import { Header, Footer } from "@/components/layout";
 
-// Підключаємо Roboto
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
@@ -32,6 +30,7 @@ export default function RootLayout({
     <Header />
     <main className="flex-grow">{children}</main>
     <Footer />
+    <div id="portal-root" />
     </body>
     </html>
   );

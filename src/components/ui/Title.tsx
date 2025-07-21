@@ -1,20 +1,37 @@
-import React from 'react';
-import classnames from 'classnames';
+import classnames from 'classnames'
+import { ReactNode } from "react";
 
 type TitleProps = {
-  children: React.ReactNode;
-  level?: 1 | 2 | 3 | 4 | 5 | 6;
+  children: ReactNode;
+  typeTitle?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   className?: string;
-};
+}
 
-export default function Title ({ children, level = 2, className }: TitleProps) {
-  const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+export const Title = ({ children, typeTitle, className, ...props }: TitleProps) => {
+  const classNameBuilder = classnames('font-black', className)
 
-  return React.createElement(
-    Tag,
-    {
-      className: classnames(className),
-    },
-    children,
-  );
-};
+  const titleBuilder = () => {
+    switch (typeTitle) {
+      case 'h1':
+        return (
+          <h1 className={classNameBuilder} {...props}>
+            {children}
+          </h1>
+        )
+      case 'h2':
+        return (
+          <h2 className={classNameBuilder} {...props}>
+            {children}
+          </h2>
+        )
+      default:
+        return (
+          <h1 className={classNameBuilder} {...props}>
+            {children}
+          </h1>
+        )
+    }
+  }
+
+  return titleBuilder()
+}

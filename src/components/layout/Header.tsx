@@ -1,24 +1,22 @@
-import Navbar from "@/components/layout/Navbar";
-import { Button } from "@/components/ui/Button";
-import Logo from "@/components/layout/Logo";
-import WorkingHours from "@/components/layout/WorkingHours";
-import Image from "next/image";
+import { Navbar, Logo, WorkingHours } from "@/components/layout";
+import { MobileMenuButton } from "@/components";
+import { Button } from "@/components/ui";
 
-export default function Header() {
+export const Header = () => {
 
   return (
     <header className="bg-stone-950 px-2 py-4">
       <div className="container flex justify-between items-center">
         <Logo />
-        <Navbar className={'hidden lg:block'} />
-        <div className="flex items-center gap-4">
-          <WorkingHours/>
-          <Button>
-            <a href="https://n828512.alteg.io">Записатися</a>
-          </Button>
-          <Button className={'bg-transparent block lg:hidden'}>
-            <Image width={30} height={30} src='/menu.svg' alt='Menu'/>
-          </Button>
+        <Navbar className={'hidden lg:flex'} />
+        <div className="items-center gap-4 flex">
+         <div className={'items-center gap-4 hidden md:flex'}>
+           <WorkingHours/>
+           <Button>
+             <a href="https://n828512.alteg.io">Записатися</a>
+           </Button>
+         </div>
+          <MobileMenuButton />
         </div>
       </div>
     </header>
