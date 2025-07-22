@@ -20,9 +20,15 @@ export const Title = ({ children, typeTitle, className, ...props }: TitleProps) 
         )
       case 'h2':
         return (
-          <h2 className={classNameBuilder} {...props}>
+          <h2 className={classnames(classNameBuilder, 'text-3xl md:text-4xl text-center mb-8')} {...props}>
             {children}
           </h2>
+        )
+      case 'h3':
+        return (
+          <h3 className={classnames(classNameBuilder, 'text-2xl md:text-3xl text-center mb-4')} {...props}>
+            {children}
+          </h3>
         )
       default:
         return (

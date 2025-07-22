@@ -1,4 +1,4 @@
-import { Navbar, Logo, WorkingHours } from "@/components/layout";
+import { Navbar, Logo, WorkingHours } from "@/components/Layout";
 import { MobileMenuButton } from "@/components";
 import { Button } from "@/components/ui";
 
@@ -12,8 +12,8 @@ export const Header = () => {
         <div className="items-center gap-4 flex">
          <div className={'items-center gap-4 hidden md:flex'}>
            <WorkingHours/>
-           <Button>
-             <a href="https://n828512.alteg.io">Записатися</a>
+           <Button typeBtn={'primary'} isLink href={'https://n828512.alteg.io'}>
+             Записатися
            </Button>
          </div>
           <MobileMenuButton />

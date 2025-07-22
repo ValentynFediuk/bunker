@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Button } from "@/components/ui";
 
 const socialLinks = [
   { link: 'https://www.instagram.com/bunker_klm/', icon: '/instagram.png', label: 'Instagram Icon'},
@@ -11,14 +12,9 @@ export const Social = () => {
     <ul className="flex gap-4">
       {socialLinks.map(({ link, icon, label }, index) => (
         <li key={index}>
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline hover:text-stone-300 transition"
-          >
+          <Button isLink href={link} className={'bg-transparent'}>
             <Image width={24} height={24} src={icon} alt={label} />
-          </a>
+          </Button>
         </li>
       ))}
     </ul>

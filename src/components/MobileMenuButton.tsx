@@ -10,7 +10,7 @@ export const MobileMenuButton = () => {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)} className={'bg-transparent block lg:hidden'}>
+      <Button typeBtn={'link'} onClickAction={() => setOpen(true)} className={'block lg:hidden'}>
             <Image width={30} height={30} src='/menu.svg' alt='Menu'/>
       </Button>
       {open && <MobileMenu onClose={() => setOpen(false)}/>}

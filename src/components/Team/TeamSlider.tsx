@@ -62,7 +62,7 @@ export const TeamSlider = () => {
           slidesPerView: 4,
         },
       }}
-      className="w-full h-[430px]">
+      className="w-full h-[460px]">
       {Team.map((card, i) => (
         <SwiperSlide key={i}>
           <TeamCard card={card}/>

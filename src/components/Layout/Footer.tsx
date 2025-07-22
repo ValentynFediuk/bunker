@@ -1,4 +1,4 @@
-import { Logo, Navbar, Social } from "@/components/layout";
+import { Logo, Navbar, Social } from "@/components/Layout";
 
 export const Footer = () => {
   return (
