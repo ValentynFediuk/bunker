@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: lab(30.797% -29.6927 17.382);
 }
 
 @theme inline {
@@ -30,4 +31,23 @@ button {
 .container {
   margin-inline: auto;
   padding-inline: 1rem;
+}
+
+/* Універсальна стилізація стрілок */
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
+  color: var(--primary); /* тут постав свій колір — hex, rgb, або навіть tailwind класом якщо хочеш */
+}
+
+/* Якщо хочеш змінити розмір іконок */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px; /* кастомний розмір стрілок */
+}
+
+.swiper .swiper-pagination-bullet {
+  background-color: var(--foreground);
+}
+.swiper .swiper-pagination-bullet-active {
+  background: var(--primary);
 }

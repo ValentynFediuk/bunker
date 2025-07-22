@@ -6,10 +6,38 @@ import { TeamCard } from "@/components/Team/TeamCard";
 
 export const TeamSlider = () => {
   const Team = [
-    { name: 'Олександр Іванишак', description: 'Барбер з багаторічним досвідом', avatar: '/mock-team-member.jpeg' },
-    { name: 'Олександр Іванишак', description: 'Барбер з багаторічним досвідом', avatar: '/mock-team-member.jpeg' },
-    { name: 'Олександр Іванишак', description: 'Барбер з багаторічним досвідом', avatar: '/mock-team-member.jpeg' },
-    { name: 'Олександр Іванишак', description: 'Барбер з багаторічним досвідом', avatar: '/mock-team-member.jpeg' },
+    {
+      name: 'Олександр Іванишак',
+      description: 'Барбер з багаторічним досвідом',
+      avatar: '/mock-team-member.jpeg',
+      instagram: 'https://www.instagram.com/die.your.dream/',
+      telegram: 'https://t.me/ValentynFediuk',
+      book: 'https://n828512.alteg.io/company/769457/personal/select-services?o=m2833716'
+    },
+    {
+      name: 'Олександр Іванишак',
+      description: 'Барбер з багаторічним досвідом',
+      avatar: '/mock-team-member.jpeg',
+      instagram: 'https://www.instagram.com/die.your.dream/',
+      telegram: 'https://t.me/ValentynFediuk',
+      book: 'https://n828512.alteg.io/company/769457/personal/select-services?o=m2833716'
+    },
+    {
+      name: 'Олександр Іванишак',
+      description: 'Барбер з багаторічним досвідом',
+      avatar: '/mock-team-member.jpeg',
+      instagram: 'https://www.instagram.com/die.your.dream/',
+      telegram: 'https://t.me/ValentynFediuk',
+      book: 'https://n828512.alteg.io/company/769457/personal/select-services?o=m2833716'
+    },
+    {
+      name: 'Олександр Іванишак',
+      description: 'Барбер з багаторічним досвідом',
+      avatar: '/mock-team-member.jpeg',
+      instagram: 'https://www.instagram.com/die.your.dream/',
+      telegram: 'https://t.me/ValentynFediuk',
+      book: 'https://n828512.alteg.io/company/769457/personal/select-services?o=m2833716'
+    },
   ]
   return (
     <Slider
@@ -34,7 +62,7 @@ export const TeamSlider = () => {
           slidesPerView: 4,
         },
       }}
-      className="w-full h-[300px] rounded-xl overflow-hidden">
+      className="w-full h-[430px]">
       {Team.map((card, i) => (
         <SwiperSlide key={i}>
           <TeamCard card={card}/>

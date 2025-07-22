@@ -1,4 +1,3 @@
-'use client'
 import { Title } from "@/components/ui";
 import { TeamSlider } from "@/components/Team";
 
