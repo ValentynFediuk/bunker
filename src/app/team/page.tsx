@@ -1,11 +1,8 @@
-'use client'
-import { SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { Slider } from "@/components";
-import { TeamCard } from "@/components/Team/TeamCard";
+import { Hero } from "@/components";
+import { TeamCard } from "@/components/Team";
 
-export const TeamSlider = () => {
-  const Team = [
+export default function TeamPage() {
+  const teamList = [
     {
       id: '0',
       name: 'Олександр Іванишак',
@@ -42,36 +39,20 @@ export const TeamSlider = () => {
       telegram: 'https://t.me/ValentynFediuk',
       book: 'https://n828512.alteg.io/company/769457/personal/select-services?o=m2833716'
     },
+
   ]
   return (
-    <Slider
-      modules={[Navigation, Pagination, Autoplay]}
-      spaceBetween={20}
-      slidesPerView={4}
-      loop={true}
-      autoplay={{ delay: 3000 }}
-      navigation
-      pagination={{ clickable: true }}
-      breakpoints={{
-        320: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-        1440: {
-          slidesPerView: 4,
-        },
-      }}
-      className="w-full h-[460px]">
-      {Team.map((card, i) => (
-        <SwiperSlide key={i}>
-          <TeamCard card={card}/>
-        </SwiperSlide>
-      ))}
-    </Slider>
+    <>
+      <Hero title={'Команда'} description={'Кожен з наших барберів — не просто майстер, а чувак, який реально шарить у стилі. Ми не штампуємо стрижки, а підходимо до кожного як до свого — з руками, які вирішують, і головою, яка думає.'} image={'/team.jpeg'}/>
+      <section className={'py-8'}>
+       <div className={'container'}>
+          <div className={'flex justify-between flex-wrap gap-8 items-center justify-center'}>
+        {teamList.map((item, index) => (
+          <TeamCard key={item.avatar + index} card={item}/>
+        ))}
+      </div>
+       </div>
+      </section>
+    </>
   )
 }

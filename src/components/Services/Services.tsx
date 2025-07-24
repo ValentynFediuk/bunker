@@ -53,7 +53,7 @@ export const Services = () => {
     },
 ]
   return (
-    <section>
+    <section className={'bg-stone-950 py-8'}>
     <div className={'container'}>
       <Title typeTitle={'h2'}>
         Послуги

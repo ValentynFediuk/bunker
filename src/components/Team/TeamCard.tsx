@@ -3,6 +3,7 @@ import { Button, Title } from "@/components/ui";
 
 type TeamCardProps = {
   card: {
+    id: string;
     name: string;
     description: string;
     avatar: string;
@@ -13,7 +14,7 @@ type TeamCardProps = {
 }
 
 export const TeamCard = ({ card }: TeamCardProps) => {
-  const { name, description, avatar, instagram, telegram, book } = card
+  const { id, name, description, avatar, instagram, telegram, book } = card
   return (
     <div className={'text-center'}>
       <div className={'relative h-50 w-50 mx-auto mb-4'}>
@@ -38,7 +39,7 @@ export const TeamCard = ({ card }: TeamCardProps) => {
           <Button typeBtn={'primary'} isLink href={book}>
             Записатися
           </Button>
-          <Button isLink href={''} typeBtn={'outlined'}>Детальніше</Button>
+          <Button isLink href={`/team/${id}`} typeBtn={'outlined'}>Детальніше</Button>
         </div>
       </div>
     </div>

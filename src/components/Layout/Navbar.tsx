@@ -5,6 +5,7 @@ const navItems = [
   {link: '/', label: 'Головна'},
   {link: '/goods', label: 'Косметика'},
   {link: '/contact', label: 'Контакти'},
+  {link: '/team', label: 'Команда'},
 ]
 
 type NavBarProps = {
