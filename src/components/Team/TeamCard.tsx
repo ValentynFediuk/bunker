@@ -10,11 +10,12 @@ type TeamCardProps = {
     instagram?: string;
     telegram?: string;
     book: string
+    isDetailsBtn?: boolean;
   }
 }
 
 export const TeamCard = ({ card }: TeamCardProps) => {
-  const { id, name, description, avatar, instagram, telegram, book } = card
+  const { id, name, description, avatar, instagram, telegram, book, isDetailsBtn = true } = card
   return (
     <div className={'text-center'}>
       <div className={'relative h-50 w-50 mx-auto mb-4'}>
@@ -39,7 +40,7 @@ export const TeamCard = ({ card }: TeamCardProps) => {
           <Button typeBtn={'primary'} isLink href={book}>
             Записатися
           </Button>
-          <Button isLink href={`/team/${id}`} typeBtn={'outlined'}>Детальніше</Button>
+          {isDetailsBtn && <Button isLink href={`/team/${id}`} typeBtn={'outlined'}>Детальніше</Button>}
         </div>
       </div>
     </div>

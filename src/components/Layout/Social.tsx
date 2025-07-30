@@ -12,7 +12,7 @@ export const Social = () => {
     <ul className="flex gap-4">
       {socialLinks.map(({ link, icon, label }, index) => (
         <li key={index}>
-          <Button isLink href={link} className={'bg-transparent'}>
+          <Button typeBtn={'link'} isLink href={link}>
             <Image width={24} height={24} src={icon} alt={label} />
           </Button>
         </li>
